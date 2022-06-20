@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
@@ -13,6 +14,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val btnStart: Button = findViewById(R.id.btnStart)
         val etname: EditText = findViewById(R.id.etname)
+        val tvAppName: TextView = findViewById(R.id.tvAppName)
+
+        tvAppName.alpha = 0f;
+        tvAppName.translationY = 50f;
+        tvAppName.animate().alpha(1f).translationYBy(-50f).duration = 1500
 
         btnStart.setOnClickListener {
             if(etname.text.isEmpty()){
