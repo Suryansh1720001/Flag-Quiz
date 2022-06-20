@@ -14,9 +14,8 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:gravity="center_horizontal"
-    >
 
+    >
 
     <TextView
         android:layout_width="wrap_content"
@@ -24,17 +23,26 @@
         android:gravity="center_horizontal"
         android:text="Result"
         android:textColor="@color/white"
-        android:textSize="25dp"
+        android:textSize="30dp"
         android:textStyle="bold" />
 
     <ImageView
-        android:id="@+id/iv_info"
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/share"
+        android:layout_width="31dp"
+        android:layout_height="36dp"
         android:layout_gravity="right"
-        android:layout_marginLeft="250dp"
-        app:srcCompat="@drawable/info_icon"
+        android:layout_marginLeft="190dp"
 
+        android:padding="1dp"
+        app:srcCompat="@drawable/share" />
+
+    <ImageView
+        android:layout_marginLeft="8dp"
+        android:id="@+id/iv_info"
+        android:layout_width="28dp"
+        android:layout_height="34dp"
+        app:srcCompat="@drawable/info"
         />
 
 
@@ -52,6 +60,15 @@
 
 
         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Hey Congratulations!"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold" />
 
 
     <TextView
