@@ -1,5 +1,5 @@
 # Quiz-Application
-![App image](/README file images/quizAPp.jpg)
+![App image](README file images/quizAPp.jpg?raw=true "Title")
 
 It is a Quiz Application in which you learn about countries' flag names and tricks to remember them.
 
