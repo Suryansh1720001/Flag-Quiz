@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 
@@ -20,20 +21,30 @@ class ResultActivity : AppCompatActivity() {
         val tvScore = findViewById<TextView>(R.id.tv_score)
         val btnFinish = findViewById<Button>(R.id.btn_finish)
         val share = findViewById<ImageView>(R.id.share)
+        val wish = findViewById<TextView>(R.id.wish_congratulation)
+        // animation in finish button
         btnFinish.alpha =0f
        btnFinish.translationY = 50f;
         btnFinish.animate().alpha(1f).translationYBy(-50f).duration = 1200
-
         share.alpha =0f
        share.translationY = 50f;
         share.animate().alpha(1f).translationYBy(-50f).duration = 1200
-
         iv_info.alpha = 0f;
         iv_info.translationY = 50f;
         iv_info.animate().alpha(1f).translationYBy(-50f).duration = 1200
-      tvName.text = intent.getStringExtra(Constants.USER_NAME)
+
+
+        tvName.text = intent.getStringExtra(Constants.USER_NAME)
         val CorrectAns = intent.getIntExtra(Constants.CORRECT_ANSWER,0)
         val TotalQuestion = intent.getIntExtra(Constants.TOTAL_QUESTIONS,0)
+
+
+        if(CorrectAns==0){
+            wish.text = "Better Luck Next Time"
+       
+        }else if(CorrectAns in 1..6){
+            wish.text = "Keep it up"
+        }
 
         tvScore.text = "Your Score is ${CorrectAns} out of ${TotalQuestion}."
 

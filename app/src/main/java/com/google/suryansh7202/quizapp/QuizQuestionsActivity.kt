@@ -58,7 +58,7 @@ class QuizQuestionsActivity : AppCompatActivity(),View.OnClickListener{
 
     private fun setQuestion() {
 
-defaultOptionsView()
+        defaultOptionsView()
         val question: Question =mQuestionsList!![mCurrentPosition - 1]
 
         ivImage?.setImageResource(question.image)
@@ -75,6 +75,11 @@ defaultOptionsView()
         tvOptionThree?.setOnClickListener(this)
         tvOptionFour?.setOnClickListener(this)
         btnSubmit?.setOnClickListener(this)
+
+        tvOptionOne?.isEnabled = true
+        tvOptionTwo?.isEnabled = true
+        tvOptionThree?.isEnabled = true
+        tvOptionFour?.isEnabled = true
 
         if(mCurrentPosition== mQuestionsList!!.size){
             btnSubmit?.text = "FINISH"
@@ -173,20 +178,24 @@ defaultOptionsView()
 
             } else {
                 val question = mQuestionsList?.get(mCurrentPosition - 1)
+
                 if (question!!.correctAnswer != mSelectedOptionPosition) {
                     answerView(mSelectedOptionPosition, R.drawable.wrong_option_border_bg)
+
                 }else{
                     mCorrectAnswers++
                 }
 
                 answerView(question.correctAnswer, R.drawable.correct_option_border_bg)
-
+                tvOptionOne?.isEnabled = false
+                tvOptionTwo?.isEnabled = false
+                tvOptionThree?.isEnabled = false
+                tvOptionFour?.isEnabled = false
                 if(mCurrentPosition == mQuestionsList!!.size){
                     btnSubmit?.text = "FINISH"
                 }else{
                     btnSubmit?.text = "GO TO NEXT QUESTION"
                 }
-
                 mSelectedOptionPosition =0
             }
 
