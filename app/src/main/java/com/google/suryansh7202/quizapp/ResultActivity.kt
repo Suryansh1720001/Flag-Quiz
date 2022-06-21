@@ -41,7 +41,7 @@ class ResultActivity : AppCompatActivity() {
 
         if(CorrectAns==0){
             wish.text = "Better Luck Next Time"
-       
+
         }else if(CorrectAns in 1..6){
             wish.text = "Keep it up"
         }
@@ -69,7 +69,14 @@ class ResultActivity : AppCompatActivity() {
             val sendIntent = Intent()
             sendIntent.type = "text/plain"
             sendIntent.action = Intent.ACTION_SEND
-            val body ="Download this App - \nMy Score is ${CorrectAns} out of ${TotalQuestion}.\n\nTry this Quiz App and learn in better way\nUsing this link \uD83D\uDC47\nhttps://github.com/Suryansh1720001/Quiz-Application"
+//          "Download this App - \n *My Score is ${CorrectAns} out of ${TotalQuestion}.* \n\nTry this Quiz App and learn in better way\nUsing this link \uD83D\uDC47\nhttps://github.com/Suryansh1720001/Quiz-Application"
+            val body ="\uD835\uDC03\uD835\uDC28\uD835\uDC30\uD835\uDC27\uD835\uDC25\uD835\uDC28\uD835\uDC1A\uD835\uDC1D \uD835\uDC2D\uD835\uDC21\uD835\uDC22\uD835\uDC2C \uD835\uDC00\uD835\uDC29\uD835\uDC29 - \n" +
+                    "\n" +
+                    "\uD835\uDC74\uD835\uDC9A \uD835\uDC7A\uD835\uDC84\uD835\uDC90\uD835\uDC93\uD835\uDC86 \uD835\uDC8A\uD835\uDC94 ${CorrectAns} \uD835\uDC76\uD835\uDC96\uD835\uDC95 \uD835\uDC90\uD835\uDC87 ${TotalQuestion}. \n" +
+                    "\n" +
+                    "\uD835\uDC13\uD835\uDC1A\uD835\uDC24\uD835\uDC1E \uD835\uDC29\uD835\uDC1A\uD835\uDC2B\uD835\uDC2D \uD835\uDC22\uD835\uDC27 \uD835\uDC2D\uD835\uDC21\uD835\uDC22\uD835\uDC2C \uD835\uDC10\uD835\uDC2E\uD835\uDC22\uD835\uDC33 \uD835\uDC1A\uD835\uDC27\uD835\uDC1D \uD835\uDC1E\uD835\uDC27\uD835\uDC21\uD835\uDC1A\uD835\uDC27\uD835\uDC1C\uD835\uDC1E \uD835\uDC32\uD835\uDC28\uD835\uDC2E\uD835\uDC2B \uD835\uDC24\uD835\uDC27\uD835\uDC28\uD835\uDC30\uD835\uDC25\uD835\uDC1E\uD835\uDC1D\uD835\uDC20\uD835\uDC1E\n" +
+                    "\uD835\uDC14\uD835\uDC2C\uD835\uDC22\uD835\uDC27\uD835\uDC20 \uD835\uDC2D\uD835\uDC21\uD835\uDC22\uD835\uDC2C \uD835\uDC25\uD835\uDC22\uD835\uDC27\uD835\uDC24 \uD83D\uDC47\uD83C\uDFFB\n" +
+                    "https://github.com/Suryansh1720001/Quiz-Application"
             sendIntent.putExtra(Intent.EXTRA_TEXT,body)
             Intent.createChooser(sendIntent, "Share using")
             startActivity(sendIntent)
