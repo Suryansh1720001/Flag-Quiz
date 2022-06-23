@@ -74,7 +74,7 @@ android:background="@color/black"
         android:id="@+id/iv_image_analysis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:contentDescription="@string/quiz_image_Description"
         tools:src="@drawable/ic_flag_of_germany">
     </ImageView>
@@ -89,7 +89,7 @@ android:background="@color/black"
         android:layout_marginStart="7dp"
 
         android:textColor="@color/white"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="60dp"
       android:textSize="20sp"
         />
 
@@ -135,32 +135,68 @@ android:background="@color/black"
         android:background="@drawable/default_option_border_bg"
         android:text="@string/sample_option"
         />
-    <Button
-        android:id="@+id/btn_previous"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
+<!--    <Button-->
+<!--        android:id="@+id/btn_previous"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center"-->
 
-        android:layout_marginTop="90dp"
-        android:text="@string/previous"
-        android:backgroundTint="@android:color/white"
-        android:textSize="18sp"
-        android:textColor="@color/design_default_color_primary"
-        android:textStyle="bold"
-        />
+<!--        android:layout_marginTop="90dp"-->
+<!--        android:text="@string/previous"-->
+<!--        android:backgroundTint="@android:color/white"-->
+<!--        android:textSize="18sp"-->
+<!--        android:textColor="@color/design_default_color_primary"-->
+<!--        android:textStyle="bold"-->
+<!--        />-->
 
-    <Button
-        android:id="@+id/btn_next"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginTop="5dp"
-        android:text="@string/next"
-        android:backgroundTint="@android:color/white"
-        android:textSize="18sp"
-        android:textColor="@color/design_default_color_primary"
-        android:textStyle="bold"
-        />
+<!--    <Button-->
+<!--        android:id="@+id/btn_next"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:text="@string/next"-->
+<!--        android:backgroundTint="@android:color/white"-->
+<!--        android:textSize="18sp"-->
+<!--        android:textColor="@color/design_default_color_primary"-->
+<!--        android:textStyle="bold"-->
+<!--        />-->
+
+
+
+        <LinearLayout
+            android:layout_marginTop="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:padding="15dp"
+            >
+
+
+            <ImageView
+                android:id="@+id/btn_previous"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/back"
+                android:layout_marginEnd="200dp"
+               >
+
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/btn_next"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/next" />
+
+
+
+        </LinearLayout>
+
+
+
     </LinearLayout>
 
 </LinearLayout>

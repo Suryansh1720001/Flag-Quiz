@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 
 class ResultAnalysis : AppCompatActivity() {
@@ -36,36 +37,51 @@ val mquestionSelectedOptions =  ArrayList<Int>()
 
 
         ivImage = findViewById(R.id.iv_image_analysis)
-        val next = findViewById<TextView>(R.id.btn_next)
-        val previous = findViewById<TextView>(R.id.btn_previous)
+        val next = findViewById<ImageView>(R.id.btn_next)
+        val previous = findViewById<ImageView>(R.id.btn_previous)
+//        next.setImageResource(next)
 
 
         tv_AcutalCorrectAnswer = findViewById(R.id.tv_AcutalCorrectAnswer)
         tv_YourAnswer = findViewById(R.id.tv_YourAnswer)
 
 
+
+
         setQuestion()
 
         previous.setOnClickListener {
+           previous.alpha =1f
+            previous.translationY = 8f;
+            previous.animate().alpha(1f).translationYBy(-5f).duration = 50
             mCurrentPosition--
-            if(mCurrentPosition<1){
+            if(mCurrentPosition==1){
+                setQuestion()
                 previous?.isEnabled = false
                 next?.isEnabled = true
             }else {
                 next?.isEnabled = true
                 setQuestion()
             }
+            Toast.makeText(this,"$mCurrentPosition",Toast.LENGTH_LONG).show()
+
         }
 
             next.setOnClickListener {
+
+                next.alpha =1f
+                next.translationY = 8f;
+                next.animate().alpha(1f).translationYBy(-5f).duration = 50
                 mCurrentPosition++
-                if(mCurrentPosition>mquestionSelectedOptions.size){
+                if(mCurrentPosition==mquestionSelectedOptions.size){
+                    setQuestion()
                     next?.isEnabled = false
                     previous?.isEnabled = true
                 }else{
                     previous?.isEnabled = true
                     setQuestion()
                 }
+                Toast.makeText(this,"$mCurrentPosition",Toast.LENGTH_LONG).show()
 
             }
 
