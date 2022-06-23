@@ -90,7 +90,6 @@
             android:textColor="#7A8089"
             android:textSize="18sp"
             android:background="@drawable/default_option_border_bg"
-
             android:text="Apple"
             />
 
@@ -132,7 +131,9 @@
             android:textColor="@color/white"
             android:text="Submit"
             android:textStyle="bold"
-            android:textSize="18sp"/>
+            android:textSize="18sp"
+
+            />
 
     </LinearLayout>
 

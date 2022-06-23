@@ -5,6 +5,8 @@ object Constants {
     const val USER_NAME: String = "user_name"
     const val TOTAL_QUESTIONS: String = "total_questions"
     const val CORRECT_ANSWER:String = "correct_answer"
+    const val QUESTION_CORRECT_OPTION: String = "question_correct_answer"
+
 
 
     fun getQuestions():ArrayList<Question>{

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+android:background="@color/black"
+    android:gravity="center"
+
+    tools:context=".ResultAnalysis">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:paddingRight="25dp"
+        android:paddingLeft="25dp"
+        >
+        <ProgressBar
+            android:id="@+id/ResultprogressBar"
+            android:layout_width="0dp"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_height="wrap_content"
+            android:indeterminate="false"
+            android:layout_weight="1"
+
+            android:max="10"
+            android:minHeight="50dp"
+            android:progress="4"/>
+
+        <TextView
+            android:id="@+id/tv_Resultprogress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:text="4/9"
+
+            />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg"
+       android:gravity="center_horizontal"
+        android:padding="20dp">
+
+
+        <TextView
+            android:id="@+id/tv_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:textColor="#FFFF"
+            android:layout_marginBottom="10dp"
+            android:text="What Country does this flag belog to?"
+            />
+
+
+        <ImageView
+        android:id="@+id/iv_image_analysis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:contentDescription="Quiz image"
+        tools:src="@drawable/ic_flag_of_germany">
+    </ImageView>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Your Answer :"
+        android:layout_marginLeft="7dp"
+
+        android:textColor="@color/white"
+        android:layout_marginTop="35dp"
+      android:textSize="20dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_YourcorrentAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:padding="15dp"
+        android:textStyle="bold"
+        android:textColor="#5C5E67"
+        android:textSize="18sp"
+        android:background="@drawable/default_option_border_bg"
+        android:text="Apple"
+        />
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Corect Anser :"
+
+        android:layout_marginLeft="7dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_AcutalCorrectAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:padding="15dp"
+        android:textStyle="bold"
+        android:textColor="#7A8089"
+        android:textSize="18sp"
+        android:background="@drawable/default_option_border_bg"
+        android:text="Apple"
+        />
+    <Button
+        android:id="@+id/btn_previous"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+        android:layout_marginTop="90dp"
+        android:text="PREVIOUS"
+        android:backgroundTint="@android:color/white"
+        android:textSize="18sp"
+        android:textColor="@color/design_default_color_primary"
+        android:textStyle="bold"
+        />
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:text="NEXT"
+        android:backgroundTint="@android:color/white"
+        android:textSize="18sp"
+        android:textColor="@color/design_default_color_primary"
+        android:textStyle="bold"
+        />
+    </LinearLayout>
+
+</LinearLayout>

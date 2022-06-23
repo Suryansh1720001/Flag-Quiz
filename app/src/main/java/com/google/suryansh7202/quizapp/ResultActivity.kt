@@ -3,6 +3,7 @@ package com.google.suryansh7202.quizapp
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.os.Parcelable
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -11,9 +12,8 @@ import androidx.appcompat.app.AppCompatActivity
 
 
 class ResultActivity : AppCompatActivity() {
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
         val iv_info = findViewById<ImageView>(R.id.iv_info)
@@ -22,10 +22,11 @@ class ResultActivity : AppCompatActivity() {
         val btnFinish = findViewById<Button>(R.id.btn_finish)
         val share = findViewById<ImageView>(R.id.share)
         val wish = findViewById<TextView>(R.id.wish_congratulation)
+        val resultAnaysis = findViewById<Button>(R.id.btn_result_analysis)
+    val questionSelectedOptions = intent.getSerializableExtra("QuestionsExtra") as ArrayList<*>?
+
+
         // animation in finish button
-        btnFinish.alpha =0f
-       btnFinish.translationY = 50f;
-        btnFinish.animate().alpha(1f).translationYBy(-50f).duration = 1200
         share.alpha =0f
        share.translationY = 50f;
         share.animate().alpha(1f).translationYBy(-50f).duration = 1200
@@ -35,16 +36,23 @@ class ResultActivity : AppCompatActivity() {
 
 
         tvName.text = intent.getStringExtra(Constants.USER_NAME)
+
         val CorrectAns = intent.getIntExtra(Constants.CORRECT_ANSWER,0)
         val TotalQuestion = intent.getIntExtra(Constants.TOTAL_QUESTIONS,0)
 
 
         if(CorrectAns==0){
             wish.text = "Better Luck Next Time"
+//            Toast.makeText(this,"{$(questionCorrectOptions.indexOf(0))}",Toast.LENGTH_LONG).show()
 
         }else if(CorrectAns in 1..6){
             wish.text = "Keep it up"
+//            Toast.makeText(this,"{$(questionCorrectOptions.indexOf(0))}",Toast.LENGTH_LONG).show()
+
         }
+            Toast.makeText(this,"${questionSelectedOptions} is  this = ${questionSelectedOptions!![9]}",Toast.LENGTH_LONG).show()
+//                    Toast.makeText(this,"${questionCorrectOptions}",Toast.LENGTH_LONG).show()
+
 
         tvScore.text = "Your Score is ${CorrectAns} out of ${TotalQuestion}."
 
@@ -80,6 +88,16 @@ class ResultActivity : AppCompatActivity() {
             sendIntent.putExtra(Intent.EXTRA_TEXT,body)
             Intent.createChooser(sendIntent, "Share using")
             startActivity(sendIntent)
+        }
+
+
+        resultAnaysis.setOnClickListener{
+            val intent = Intent(this,ResultAnalysis::class.java)
+            intent.putParcelableArrayListExtra(
+                "QuestionsExtra",
+                questionSelectedOptions as ArrayList<out Parcelable?>?
+            )
+            startActivity(intent)
         }
 
     }

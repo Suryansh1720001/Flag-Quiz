@@ -3,18 +3,18 @@ package com.google.suryansh7202.quizapp
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
-import android.graphics.drawable.AdaptiveIconDrawable
-import android.graphics.drawable.Drawable
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Parcelable
 import android.view.View
-import android.view.accessibility.AccessibilityManager
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import org.w3c.dom.Text
 
 
 class QuizQuestionsActivity : AppCompatActivity(),View.OnClickListener{
+
+   private val questionSelectedOptions= ArrayList<Int>()
+
     private var mUserName: String? =null
     private var mCorrectAnswers: Int = 0
     private var mCurrentPosition: Int =1
@@ -157,6 +157,9 @@ class QuizQuestionsActivity : AppCompatActivity(),View.OnClickListener{
 
 
         R.id.btn_submit -> {
+            if(mSelectedOptionPosition==0 && btnSubmit?.text == "SUBMIT"){
+                questionSelectedOptions.add(mSelectedOptionPosition)
+            }
 
             if (mSelectedOptionPosition == 0) {
                 mCurrentPosition++
@@ -164,6 +167,7 @@ class QuizQuestionsActivity : AppCompatActivity(),View.OnClickListener{
 
                 when {
                     mCurrentPosition <= mQuestionsList!!.size -> {
+
                         setQuestion()
                     }
                     else ->{
@@ -171,6 +175,11 @@ class QuizQuestionsActivity : AppCompatActivity(),View.OnClickListener{
                         intent.putExtra(Constants.USER_NAME,mUserName)
                         intent.putExtra(Constants.CORRECT_ANSWER,mCorrectAnswers)
                         intent.putExtra(Constants.TOTAL_QUESTIONS,mQuestionsList?.size)
+                        // array list
+                        intent.putParcelableArrayListExtra(
+                            "QuestionsExtra",
+                            questionSelectedOptions as ArrayList<out Parcelable?>?
+                        )
                         startActivity(intent)
                         finish()
                     }
@@ -191,6 +200,7 @@ class QuizQuestionsActivity : AppCompatActivity(),View.OnClickListener{
                 tvOptionTwo?.isEnabled = false
                 tvOptionThree?.isEnabled = false
                 tvOptionFour?.isEnabled = false
+                questionSelectedOptions.add(mSelectedOptionPosition)
                 if(mCurrentPosition == mQuestionsList!!.size){
                     btnSubmit?.text = "FINISH"
                 }else{

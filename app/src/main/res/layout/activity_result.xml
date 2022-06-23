@@ -50,7 +50,7 @@
 
 
     <ImageView
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:id="@+id/iv_trophy"
         android:layout_width="342dp"
         android:layout_height="374dp"
@@ -103,19 +103,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:text="FINISH"
         android:backgroundTint="@android:color/white"
         android:textSize="18sp"
         android:textColor="@color/design_default_color_primary"
         android:textStyle="bold"
 
-
-
-
-
-
     />
+
+    <Button
+        android:id="@+id/btn_result_analysis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="RESULT ANALYSIS"
+        android:backgroundTint="@android:color/white"
+        android:textSize="18sp"
+        android:textColor="@color/design_default_color_primary"
+        android:textStyle="bold"
+        />
+
+
 
 
 
