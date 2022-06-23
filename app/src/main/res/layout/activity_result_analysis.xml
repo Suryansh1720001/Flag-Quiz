@@ -40,7 +40,7 @@ android:background="@color/black"
             android:padding="15dp"
             android:textColor="@color/white"
             android:textSize="14sp"
-            android:text="4/9"
+            android:text="@string/_4_9_Progress"
 
             />
     </LinearLayout>
@@ -66,7 +66,7 @@ android:background="@color/black"
             android:textSize="22sp"
             android:textColor="#FFFF"
             android:layout_marginBottom="10dp"
-            android:text="What Country does this flag belog to?"
+            android:text="@string/sample_ques"
             />
 
 
@@ -75,7 +75,7 @@ android:background="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:contentDescription="Quiz image"
+        android:contentDescription="@string/quiz_image_Description"
         tools:src="@drawable/ic_flag_of_germany">
     </ImageView>
 
@@ -85,16 +85,16 @@ android:background="@color/black"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:text="Your Answer :"
-        android:layout_marginLeft="7dp"
+        android:text="@string/your_answer"
+        android:layout_marginStart="7dp"
 
         android:textColor="@color/white"
         android:layout_marginTop="35dp"
-      android:textSize="20dp"
+      android:textSize="20sp"
         />
 
     <TextView
-        android:id="@+id/tv_YourcorrentAnswer"
+        android:id="@+id/tv_YourAnswer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -104,7 +104,7 @@ android:background="@color/black"
         android:textColor="#5C5E67"
         android:textSize="18sp"
         android:background="@drawable/default_option_border_bg"
-        android:text="Apple"
+        android:text="@string/sample_option"
         />
 
 
@@ -113,13 +113,13 @@ android:background="@color/black"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:text="Corect Anser :"
+        android:text="@string/correct_answer"
 
-        android:layout_marginLeft="7dp"
+        android:layout_marginStart="7dp"
         android:textColor="@color/white"
         android:layout_marginTop="10dp"
 
-        android:textSize="20dp"
+        android:textSize="20sp"
         />
 
     <TextView
@@ -133,7 +133,7 @@ android:background="@color/black"
         android:textColor="#7A8089"
         android:textSize="18sp"
         android:background="@drawable/default_option_border_bg"
-        android:text="Apple"
+        android:text="@string/sample_option"
         />
     <Button
         android:id="@+id/btn_previous"
@@ -142,7 +142,7 @@ android:background="@color/black"
         android:gravity="center"
 
         android:layout_marginTop="90dp"
-        android:text="PREVIOUS"
+        android:text="@string/previous"
         android:backgroundTint="@android:color/white"
         android:textSize="18sp"
         android:textColor="@color/design_default_color_primary"
@@ -155,7 +155,7 @@ android:background="@color/black"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_marginTop="5dp"
-        android:text="NEXT"
+        android:text="@string/next"
         android:backgroundTint="@android:color/white"
         android:textSize="18sp"
         android:textColor="@color/design_default_color_primary"

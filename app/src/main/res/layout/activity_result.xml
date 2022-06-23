@@ -21,9 +21,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="Result"
+        android:text="@string/result"
         android:textColor="@color/white"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
     <ImageView
@@ -32,18 +32,19 @@
         android:layout_width="31dp"
         android:layout_height="36dp"
         android:layout_gravity="right"
-        android:layout_marginLeft="190dp"
-
+        android:layout_marginStart="190dp"
         android:padding="1dp"
-        app:srcCompat="@drawable/share" />
+        app:srcCompat="@drawable/share"
+        tools:ignore="RtlHardcoded"
+        android:contentDescription="@string/share_button_Description" />
 
     <ImageView
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         android:id="@+id/iv_info"
         android:layout_width="28dp"
         android:layout_height="34dp"
         app:srcCompat="@drawable/info"
-        />
+        android:contentDescription="@string/info_button_description" />
 
 
 </LinearLayout>
@@ -59,16 +60,16 @@
         app:srcCompat="@drawable/winner"
 
 
-        />
+        android:contentDescription="@string/result_image" />
 
     <TextView
         android:id="@+id/wish_congratulation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="Hey Congratulations!"
+        android:text="@string/hey_congratulations"
         android:textColor="@color/white"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:textStyle="bold" />
 
 
@@ -77,11 +78,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:text="UserName"
+        android:text="@string/username"
         android:gravity="center"
         android:textColor="@color/white"
         android:layout_marginTop="15dp"
-        android:textSize="20dp"
+        android:textSize="20sp"
         />
 
 
@@ -89,12 +90,28 @@
         android:id="@+id/tv_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Your Score is 0 out of 10."
+        android:text="@string/your_score_is_0_out_of_10"
         android:gravity="center"
         android:padding="5dp"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:textColor="@android:color/secondary_text_dark"
         android:layout_marginBottom="25dp"
+        />
+
+
+
+
+    <Button
+        android:id="@+id/btn_result_analysis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:text="@string/result_analysis"
+        android:backgroundTint="@android:color/white"
+        android:textSize="18sp"
+        android:textColor="@color/design_default_color_primary"
+        android:textStyle="bold"
         />
 
 
@@ -103,27 +120,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_marginTop="8dp"
-        android:text="FINISH"
+        android:layout_marginTop="10dp"
+        android:text="@string/finish"
         android:backgroundTint="@android:color/white"
         android:textSize="18sp"
         android:textColor="@color/design_default_color_primary"
         android:textStyle="bold"
 
     />
-
-    <Button
-        android:id="@+id/btn_result_analysis"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:text="RESULT ANALYSIS"
-        android:backgroundTint="@android:color/white"
-        android:textSize="18sp"
-        android:textColor="@color/design_default_color_primary"
-        android:textStyle="bold"
-        />
 
 
 

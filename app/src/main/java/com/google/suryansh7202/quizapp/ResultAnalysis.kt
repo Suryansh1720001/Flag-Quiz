@@ -1,13 +1,11 @@
 package com.google.suryansh7202.quizapp
 
-import android.content.Intent
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Parcelable
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
-import android.widget.Toast
 import androidx.core.content.ContextCompat
 
 class ResultAnalysis : AppCompatActivity() {
@@ -20,7 +18,7 @@ class ResultAnalysis : AppCompatActivity() {
 val mquestionSelectedOptions =  ArrayList<Int>()
 
         private var tv_AcutalCorrectAnswer: TextView? = null
-    private var tv_YourcorrentAnswer: TextView? = null
+    private var tv_YourAnswer: TextView? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,12 +32,7 @@ val mquestionSelectedOptions =  ArrayList<Int>()
 
         progressBar =findViewById(R.id.ResultprogressBar)
         tvProgress = findViewById(R.id.tv_Resultprogress)
-        mquestionSelectedOptions?.addAll(questionSelectedOptions!!)
-
-
-
-Toast.makeText(this,"$mquestionSelectedOptions", Toast.LENGTH_LONG).show()
-
+        mquestionSelectedOptions.addAll(questionSelectedOptions!!)
 
 
         ivImage = findViewById(R.id.iv_image_analysis)
@@ -48,7 +41,7 @@ Toast.makeText(this,"$mquestionSelectedOptions", Toast.LENGTH_LONG).show()
 
 
         tv_AcutalCorrectAnswer = findViewById(R.id.tv_AcutalCorrectAnswer)
-        tv_YourcorrentAnswer = findViewById(R.id.tv_YourcorrentAnswer)
+        tv_YourAnswer = findViewById(R.id.tv_YourAnswer)
 
 
         setQuestion()
@@ -96,26 +89,27 @@ Toast.makeText(this,"$mquestionSelectedOptions", Toast.LENGTH_LONG).show()
 
 
 
+    @SuppressLint("SetTextI18n")
     private fun yourans(){
         val question: Question =mQuestionsList!![mCurrentPosition - 1]
 
-        if(mquestionSelectedOptions!![mCurrentPosition-1] == question!!.correctAnswer ){
-            setOptions(question!!.correctAnswer)
-            tv_YourcorrentAnswer?.background = ContextCompat.getDrawable(
+        if(mquestionSelectedOptions[mCurrentPosition-1] == question.correctAnswer ){
+            setOptions(question.correctAnswer)
+            tv_YourAnswer?.background = ContextCompat.getDrawable(
                 this,R.drawable.correct_option_border_bg
             )
-        }else if (mquestionSelectedOptions!![mCurrentPosition-1] ==0 ){
-            tv_YourcorrentAnswer?.text = "Not Selected"
-            tv_YourcorrentAnswer?.background = ContextCompat.getDrawable(
+        }else if (mquestionSelectedOptions[mCurrentPosition-1] ==0 ){
+            tv_YourAnswer?.text = "Not Selected"
+            tv_YourAnswer?.background = ContextCompat.getDrawable(
                 this,R.drawable.selected_option_border_bg
             )
 
         }
 
         else{
-            setOptions(mquestionSelectedOptions!![mCurrentPosition-1])
+            setOptions(mquestionSelectedOptions[mCurrentPosition-1])
 
-            tv_YourcorrentAnswer?.background = ContextCompat.getDrawable(
+            tv_YourAnswer?.background = ContextCompat.getDrawable(
                 this,R.drawable.wrong_option_border_bg
             )
         }
@@ -161,17 +155,17 @@ Toast.makeText(this,"$mquestionSelectedOptions", Toast.LENGTH_LONG).show()
 
      when(option){
                 1 -> {
-                    tv_YourcorrentAnswer?.text = question.optionOne
+                    tv_YourAnswer?.text = question.optionOne
 
                 }
                 2 -> {
-                    tv_YourcorrentAnswer?.text = question.optionTwo
+                    tv_YourAnswer?.text = question.optionTwo
                 }
                 3 -> {
-                    tv_YourcorrentAnswer?.text = question.optionThree
+                    tv_YourAnswer?.text = question.optionThree
                 }
                 else ->{
-                    tv_YourcorrentAnswer?.text = question.optionFour
+                    tv_YourAnswer?.text = question.optionFour
                 }
             }
 

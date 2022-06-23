@@ -5,4 +5,22 @@
     <string name="please_enter_your_name">Please enter your name</string>
     <string name="start">Start</string>
     <string name="name">e.g. Suryansh</string>
+    <string name="sample_ques">What Country does this flag belog to?</string>
+    <string name="quiz_image_Description">Quiz image</string>
+    <string name="_4_9_Progress">4/9</string>
+    <string name="sample_option">Apple</string>
+    <string name="submit_quiz">Submit</string>
+    <string name="result">Result</string>
+    <string name="share_button_Description">Share Button</string>
+    <string name="info_button_description">info button</string>
+    <string name="result_image">Result image</string>
+    <string name="hey_congratulations">Hey Congratulations!</string>
+    <string name="username">UserName</string>
+    <string name="your_score_is_0_out_of_10">Your Score is 0 out of 10.</string>
+    <string name="finish">FINISH</string>
+    <string name="result_analysis">RESULT ANALYSIS</string>
+    <string name="your_answer">Your Answer :</string>
+    <string name="correct_answer">Correct Answer :</string>
+    <string name="previous">PREVIOUS</string>
+    <string name="next">NEXT</string>
 </resources>

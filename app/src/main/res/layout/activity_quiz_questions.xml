@@ -18,11 +18,12 @@
             android:id="@+id/tv_question"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:gravity="center"
             android:textSize="22sp"
             android:textColor="#363A43"
-            android:text="What Country does this flag belog to?"
+            android:text="@string/sample_ques"
             android:textStyle="bold"
             />
 
@@ -31,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:contentDescription="Quiz image"
+            android:contentDescription="@string/quiz_image_Description"
             tools:src="@drawable/ic_flag_of_germany">
 
         </ImageView>
@@ -61,7 +62,7 @@
                 android:gravity="center"
                 android:padding="15dp"
                 android:textSize="14sp"
-                android:text="4/9"
+                android:text="@string/_4_9_Progress"
 
                 />
         </LinearLayout>
@@ -77,7 +78,7 @@
             android:textColor="#7A8089"
             android:textSize="18sp"
         android:background="@drawable/default_option_border_bg"
-            android:text="Apple"
+            android:text="@string/sample_option"
             />
 
         <TextView
@@ -90,7 +91,7 @@
             android:textColor="#7A8089"
             android:textSize="18sp"
             android:background="@drawable/default_option_border_bg"
-            android:text="Apple"
+            android:text="@string/sample_option"
             />
 
         <TextView
@@ -104,7 +105,7 @@
             android:textSize="18sp"
             android:background="@drawable/default_option_border_bg"
 
-            android:text="Apple"
+            android:text="@string/sample_option"
             />
 
         <TextView
@@ -117,8 +118,7 @@
             android:textColor="#7A8089"
             android:textSize="18sp"
             android:background="@drawable/default_option_border_bg"
-
-            android:text="Apple"
+            android:text="@string/sample_option"
             />
 
 
@@ -129,7 +129,7 @@
             android:layout_margin="10dp"
             android:background="@color/design_default_color_primary"
             android:textColor="@color/white"
-            android:text="Submit"
+            android:text="@string/submit_quiz"
             android:textStyle="bold"
             android:textSize="18sp"
 

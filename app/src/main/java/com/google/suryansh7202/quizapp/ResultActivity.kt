@@ -1,5 +1,6 @@
 package com.google.suryansh7202.quizapp
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -12,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 
 class ResultActivity : AppCompatActivity() {
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -43,15 +45,11 @@ class ResultActivity : AppCompatActivity() {
 
         if(CorrectAns==0){
             wish.text = "Better Luck Next Time"
-//            Toast.makeText(this,"{$(questionCorrectOptions.indexOf(0))}",Toast.LENGTH_LONG).show()
 
         }else if(CorrectAns in 1..6){
             wish.text = "Keep it up"
-//            Toast.makeText(this,"{$(questionCorrectOptions.indexOf(0))}",Toast.LENGTH_LONG).show()
 
         }
-            Toast.makeText(this,"${questionSelectedOptions} is  this = ${questionSelectedOptions!![9]}",Toast.LENGTH_LONG).show()
-//                    Toast.makeText(this,"${questionCorrectOptions}",Toast.LENGTH_LONG).show()
 
 
         tvScore.text = "Your Score is ${CorrectAns} out of ${TotalQuestion}."
