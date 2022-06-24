@@ -1,8 +1,10 @@
 package com.google.suryansh7202.quizapp
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Vibrator
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView

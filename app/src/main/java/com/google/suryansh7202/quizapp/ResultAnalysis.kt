@@ -1,13 +1,18 @@
 package com.google.suryansh7202.quizapp
 
 import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Context
+import android.os.Build
 import android.os.Bundle
+import android.os.VibrationEffect
+import android.os.Vibrator
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
 
 class ResultAnalysis : AppCompatActivity() {
     private var mCurrentPosition: Int =1
@@ -16,7 +21,9 @@ class ResultAnalysis : AppCompatActivity() {
     private var tvProgress: TextView?= null
     private var ivImage : ImageView?= null
 
-val mquestionSelectedOptions =  ArrayList<Int>()
+
+
+    val mquestionSelectedOptions =  ArrayList<Int>()
 
         private var tv_AcutalCorrectAnswer: TextView? = null
     private var tv_YourAnswer: TextView? = null
@@ -51,38 +58,53 @@ val mquestionSelectedOptions =  ArrayList<Int>()
         setQuestion()
 
         previous.setOnClickListener {
+            val vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+                if (vibrator.hasVibrator()) { // Vibrator availability checking
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                        vibrator.vibrate(VibrationEffect.createOneShot(30, VibrationEffect.DEFAULT_AMPLITUDE)) // New vibrate method for API Level 26 or higher
+                    } else {
+                        vibrator.vibrate(500) // Vibrate method for below API Level 26
+                    }
+                }
            previous.alpha =1f
             previous.translationY = 8f;
             previous.animate().alpha(1f).translationYBy(-5f).duration = 50
+
             mCurrentPosition--
             if(mCurrentPosition==1){
-                setQuestion()
+
                 previous?.isEnabled = false
                 next?.isEnabled = true
             }else {
                 next?.isEnabled = true
-                setQuestion()
-            }
-            Toast.makeText(this,"$mCurrentPosition",Toast.LENGTH_LONG).show()
 
+            }
+
+            setQuestion()
         }
 
             next.setOnClickListener {
-
+                val vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+                if (vibrator.hasVibrator()) { // Vibrator availability checking
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                        vibrator.vibrate(VibrationEffect.createOneShot(30, VibrationEffect.DEFAULT_AMPLITUDE)) // New vibrate method for API Level 26 or higher
+                    } else {
+                        vibrator.vibrate(500) // Vibrate method for below API Level 26
+                    }
+                }
                 next.alpha =1f
                 next.translationY = 8f;
                 next.animate().alpha(1f).translationYBy(-5f).duration = 50
                 mCurrentPosition++
                 if(mCurrentPosition==mquestionSelectedOptions.size){
-                    setQuestion()
+
                     next?.isEnabled = false
                     previous?.isEnabled = true
                 }else{
                     previous?.isEnabled = true
-                    setQuestion()
-                }
-                Toast.makeText(this,"$mCurrentPosition",Toast.LENGTH_LONG).show()
 
+                }
+                setQuestion()
             }
 
 
@@ -186,13 +208,10 @@ val mquestionSelectedOptions =  ArrayList<Int>()
             }
 
     }
-
-
-
-
-
-
 }
+
+
+
 
 
 
