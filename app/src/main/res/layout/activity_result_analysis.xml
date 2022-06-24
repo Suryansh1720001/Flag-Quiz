@@ -27,8 +27,7 @@ android:background="@color/black"
             android:layout_height="wrap_content"
             android:indeterminate="false"
             android:layout_weight="1"
-
-            android:max="10"
+            android:max="100"
             android:minHeight="50dp"
             android:progress="4"/>
 
@@ -70,13 +69,14 @@ android:background="@color/black"
             />
 
 
+
         <ImageView
         android:id="@+id/iv_image_analysis"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+            android:layout_width="250dp"
+            android:layout_height="120dp"
         android:layout_marginTop="15dp"
         android:contentDescription="@string/quiz_image_Description"
-        tools:src="@drawable/ic_flag_of_germany">
+        tools:src="@drawable/ic_flag_of_australia">
     </ImageView>
 
 
