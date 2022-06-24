@@ -1,10 +1,11 @@
 package com.google.suryansh7202.quizapp
 
+import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
-import android.os.Bundle
-import android.os.Parcelable
+import android.os.*
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
@@ -131,6 +132,7 @@ class QuizQuestionsActivity : AppCompatActivity(),View.OnClickListener{
         )
 
     }
+    @SuppressLint("SetTextI18n")
     override fun onClick(view: View?) {
 
     when(view?.id) {
@@ -160,6 +162,21 @@ class QuizQuestionsActivity : AppCompatActivity(),View.OnClickListener{
             if(mSelectedOptionPosition==0 && btnSubmit?.text == "SUBMIT"){
                 questionSelectedOptions.add(mSelectedOptionPosition)
             }
+
+            if(mSelectedOptionPosition==0 && (btnSubmit?.text == "FINISH" || btnSubmit?.text == "GO TO NEXT QUESTION" || btnSubmit?.text == "SUBMIT")){
+
+                val vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+                if (vibrator.hasVibrator()) { // Vibrator availability checking
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                        vibrator.vibrate(VibrationEffect.createOneShot(30, VibrationEffect.DEFAULT_AMPLITUDE)) // New vibrate method for API Level 26 or higher
+                    } else {
+                        vibrator.vibrate(500) // Vibrate method for below API Level 26
+                    }
+                }
+
+            }
+
+
 
             if (mSelectedOptionPosition == 0) {
                 mCurrentPosition++
