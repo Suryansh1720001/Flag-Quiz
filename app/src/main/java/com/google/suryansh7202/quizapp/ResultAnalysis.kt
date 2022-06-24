@@ -51,7 +51,7 @@ class ResultAnalysis : AppCompatActivity() {
 
         tv_AcutalCorrectAnswer = findViewById(R.id.tv_AcutalCorrectAnswer)
         tv_YourAnswer = findViewById(R.id.tv_YourAnswer)
-
+        previous?.isEnabled = false
 
 
 
