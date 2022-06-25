@@ -4,7 +4,7 @@
 
 ## Enhance your knowledge by taking part in this Quiz - 100 Questions
 
-It is based on kotlin language. You can find out upto 100 flags questions with their result Analysis.
+It is based on Kotlin language. You can find out upto 100 flags questions with their result analysis.
 
 ## Some Screenshot of Applicaiton
 
@@ -22,7 +22,7 @@ It is based on kotlin language. You can find out upto 100 flags questions with t
 - xml language
 - Android Studoid
 
-And of course Age-Calculator itself is open source with a [public repository](https://github.com/Suryansh1720001/Quiz-Application)
+And of course Flag Quiz-App itself is open source with a [public repository](https://github.com/Suryansh1720001/Quiz-Application)
  on GitHub.
 
 ## Installation
