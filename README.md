@@ -1,4 +1,4 @@
-# Flag Quiz App
+# Flag Quiz App - [DOWNLOAD APP](https://www.mediafire.com/file/tji8khvnp4bu5gs/Flag_Quiz_App.apk/file?dkey=tji8khvnp4bu5gs)
 
 <img src ="https://user-images.githubusercontent.com/85965606/175757754-d3a711b9-8b43-4fca-a86e-2a1b5ee96414.jpg" width="600" heigth="600">
 
@@ -26,7 +26,10 @@ And of course Age-Calculator itself is open source with a [public repository](ht
  on GitHub.
 
 ## Installation
-... update soon...
+... (GooglePlay Store link available soon) ...
+
+- Use this link to download the app  
+- [DOWNLOAD APP](https://www.mediafire.com/file/tji8khvnp4bu5gs/Flag_Quiz_App.apk/file?dkey=tji8khvnp4bu5gs)
 
 ## Attributes
 
