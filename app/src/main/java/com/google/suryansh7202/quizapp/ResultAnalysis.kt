@@ -43,10 +43,15 @@ class ResultAnalysis : AppCompatActivity() {
         mquestionSelectedOptions.addAll(questionSelectedOptions!!)
 
 
+
+        for( i in (mquestionSelectedOptions.size+1)..100 ){
+            mquestionSelectedOptions.add(0)
+        }
+
+
         ivImage = findViewById(R.id.iv_image_analysis)
         val next = findViewById<ImageView>(R.id.btn_next)
         val previous = findViewById<ImageView>(R.id.btn_previous)
-//        next.setImageResource(next)
 
 
         tv_AcutalCorrectAnswer = findViewById(R.id.tv_AcutalCorrectAnswer)
