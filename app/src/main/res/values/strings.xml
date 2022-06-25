@@ -23,4 +23,5 @@
     <string name="correct_answer">Correct Answer :</string>
     <string name="previous">PREVIOUS</string>
     <string name="next">NEXT</string>
+    <string name="total_quiz_time_30_minutes">Total Quiz Time = 30 minutes</string>
 </resources>

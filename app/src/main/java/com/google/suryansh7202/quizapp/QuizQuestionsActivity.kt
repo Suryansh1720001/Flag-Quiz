@@ -2,7 +2,6 @@ package com.google.suryansh7202.quizapp
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
 import android.os.*
@@ -10,6 +9,11 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import java.sql.Time
+import java.util.*
+import java.util.concurrent.TimeUnit
+import kotlin.collections.ArrayList
+import android.content.Intent as Intent1
 
 
 class QuizQuestionsActivity : AppCompatActivity(),View.OnClickListener{
@@ -41,6 +45,11 @@ class QuizQuestionsActivity : AppCompatActivity(),View.OnClickListener{
         setContentView(R.layout.activity_quiz_questions)
 
 
+        // time remaining
+
+        TimeRemaning(findViewById(R.id.tv_timecount))
+
+
         progressBar =findViewById(R.id.progressBar)
         tvProgress = findViewById(R.id.tv_progress)
         tvQuestion = findViewById(R.id.tv_question)
@@ -55,6 +64,48 @@ class QuizQuestionsActivity : AppCompatActivity(),View.OnClickListener{
         setQuestion()
         defaultOptionsView()
 
+    }
+
+
+    private fun TimeRemaning(mTextFieldsec: TextView) {
+        object : CountDownTimer(60000, 1000) {
+            @SuppressLint("SetTextI18n")
+            override fun onTick(millisUntilFinished: Long) {
+                // TODO do this later in minutes and seconds both
+
+//                if(mTextFieldsec.text == 5.toString() ){
+//                    mTextFieldsec.setTextColor(Color.parseColor("#bdbdbd"));
+//                }
+
+//                val sDuration = String.format(Locale.ENGLISH,"%02d : %02d",
+//                    TimeUnit.MILLISECONDS.toMinutes(1),
+//                    TimeUnit.MILLISECONDS.toSeconds(1),
+//                    TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(1)))
+
+                mTextFieldsec.text = "Time Remaining (sec) : " +(millisUntilFinished / (1000))
+
+            }
+
+            override fun onFinish() {
+                timeFinish()
+            }
+
+        }.start()
+
+    }
+
+    private fun timeFinish(){
+        val intent = Intent1(this,ResultActivity::class.java)
+        intent.putExtra(Constants.USER_NAME,mUserName)
+        intent.putExtra(Constants.CORRECT_ANSWER,mCorrectAnswers)
+        intent.putExtra(Constants.TOTAL_QUESTIONS,mQuestionsList?.size)
+        // array list
+        intent.putParcelableArrayListExtra(
+            "QuestionsExtra",
+            questionSelectedOptions as ArrayList<out Parcelable?>?
+        )
+        startActivity(intent)
+        finish()
     }
 
     private fun setQuestion() {
@@ -188,7 +239,7 @@ class QuizQuestionsActivity : AppCompatActivity(),View.OnClickListener{
                         setQuestion()
                     }
                     else ->{
-                       val intent = Intent(this,ResultActivity::class.java)
+                       val intent = Intent1(this,ResultActivity::class.java)
                         intent.putExtra(Constants.USER_NAME,mUserName)
                         intent.putExtra(Constants.CORRECT_ANSWER,mCorrectAnswers)
                         intent.putExtra(Constants.TOTAL_QUESTIONS,mQuestionsList?.size)
@@ -261,5 +312,4 @@ class QuizQuestionsActivity : AppCompatActivity(),View.OnClickListener{
 
 
     }
-
 

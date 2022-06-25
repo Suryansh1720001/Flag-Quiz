@@ -17,6 +17,8 @@
         android:layout_gravity="center_horizontal"
         app:srcCompat="@drawable/welcome" />
 
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,6 +36,8 @@
         android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="bold" />
+
+
 
 
 
@@ -62,6 +66,8 @@
             android:gravity="center"
             android:textColor="#364A43"
             />
+
+
 
         <TextView
             android:layout_width="match_parent"
@@ -105,9 +111,22 @@
     android:textColor="@android:color/white"
     />
 
+
     </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:gravity="center"
+            android:text="@string/total_quiz_time_30_minutes"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            />
 
     </LinearLayout>
 
