@@ -32,7 +32,7 @@ And of course Flag Quiz-App itself is open source with a [public repository](htt
 
 ## Want to Contribute😎:
 Refer to <a href="CONTRIBUTING.md">contributing.md</a><br><br>
-Don't forget to follow [@Rancho2002](https://www.github.com/rancho2002) ⭐😊
+Don't forget to follow [@Suryansh1720001](https://github.com/Suryansh1720001) ⭐😊
 
 ## Attributes
 
