@@ -1,4 +1,4 @@
-# Flag Quiz App - [DOWNLOAD APP](https://www.mediafire.com/file/gevaw9ytnk2scvp/Flag_Quiz_App.apk/file?dkey=gevaw9ytnk2scvp)
+# Flag Quiz App - [DOWNLOAD APP](https://www.mediafire.com/file/gevaw9ytnk2scvp/Flag_Quiz_App.apk/file?dkey=gevaw9ytnk2scvp)  &nbsp;    ![](https://img.shields.io/badge/-Hacktoberfest_2022-darkred?style=flat&logo=Hacktoberfest&logoColor=white)&nbsp;
 
 <img src ="https://user-images.githubusercontent.com/85965606/175757754-d3a711b9-8b43-4fca-a86e-2a1b5ee96414.jpg" width="600" heigth="600">
 
@@ -30,7 +30,7 @@ And of course Flag Quiz-App itself is open source with a [public repository](htt
 - Use this link to download the app  
 - [DOWNLOAD APP](https://www.mediafire.com/file/gevaw9ytnk2scvp/Flag_Quiz_App.apk/file?dkey=gevaw9ytnk2scvp)
 
-## Want to Contribute😎:
+## Want to Contribute😎: &nbsp;    ![](https://img.shields.io/badge/-Hacktoberfest_2022-darkred?style=flat&logo=Hacktoberfest&logoColor=white)&nbsp;
 Refer to <a href="CONTRIBUTING.md">contributing.md</a><br><br>
 Don't forget to follow [@Suryansh1720001](https://github.com/Suryansh1720001) ⭐😊
 
