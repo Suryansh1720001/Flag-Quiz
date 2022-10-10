@@ -30,6 +30,10 @@ And of course Flag Quiz-App itself is open source with a [public repository](htt
 - Use this link to download the app  
 - [DOWNLOAD APP](https://www.mediafire.com/file/gevaw9ytnk2scvp/Flag_Quiz_App.apk/file?dkey=gevaw9ytnk2scvp)
 
+## Want to Contribute😎:
+Refer to <a href="CONTRIBUTING.md">contributing.md</a><br><br>
+Don't forget to follow [@Rancho2002](https://www.github.com/rancho2002) ⭐😊
+
 ## Attributes
 
 Thank you for providing the images from your sources 
