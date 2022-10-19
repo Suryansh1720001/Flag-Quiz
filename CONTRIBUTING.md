@@ -30,7 +30,7 @@ You must register and make four valid pull requests (PRs) between October 1-31 (
 Visit the hactoberfest site for more details :- https://hacktoberfest.digitalocean.com
 
 
-
+```
 1) Star ⭐ the repo & follow the account @Suryansh1720001
 2) Read all the readme file and generate the issue
 3) After assign the issue, fork the repo
@@ -38,5 +38,6 @@ Visit the hactoberfest site for more details :- https://hacktoberfest.digitaloce
 5) Create a new branch 
 6) Now change the code 
 7) Commit and create a pull request
+```
 
 🥳🥳 and yaay!! You make your PR successfully.<br>
