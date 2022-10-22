@@ -4,9 +4,9 @@
 
 ## Enhance your knowledge by taking part in this Quiz - 100 Questions in 30 minutes
 
-It is based on Kotlin language. You can find out upto 100 flag questions with their result analysis and time counter.
+It is based on the Kotlin language. You can find out upto 100 flag questions with their result analysis and time counter.
 
-## Some Screenshot of Applicaiton
+## Some Screenshot of application
 
 .<img src= "https://user-images.githubusercontent.com/85965606/175786915-e443cb2d-6682-4761-9466-f72b58aea4d3.jpg" width="250" height="505">
 .<img src= "https://user-images.githubusercontent.com/85965606/175786919-ea474e73-e636-40b7-a8fb-f660ac88818a.jpg" width="250" height="505">
@@ -19,9 +19,9 @@ It is based on Kotlin language. You can find out upto 100 flag questions with th
 
 - Kotlin language
 - xml language
-- Android Studoid
+- Android Studio
 
-And of course Flag Quiz-App itself is open source with a [public repository](https://github.com/Suryansh1720001/Quiz-Application)
+And of course, Flag Quiz-App itself is open source with a [public repository](https://github.com/Suryansh1720001/Quiz-Application)
  on GitHub.
 
 ## Installation
